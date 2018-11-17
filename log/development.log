@@ -1,0 +1,2529 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateUsers (20181117072524)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181117072524_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181117072524"]]
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-17 08:38:10.294739"], ["updated_at", "2018-11-17 08:38:10.294739"]]
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for 127.0.0.1 at 2018-11-17 17:39:04 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+
+NameError - uninitialized constant UserController:
+
+Started POST "/__better_errors/134de86590db50e0/variables" for 127.0.0.1 at 2018-11-17 17:39:05 +0900
+Started GET "/" for 127.0.0.1 at 2018-11-17 17:39:17 +0900
+Processing by UsersController#index as HTML
+Started GET "/" for 127.0.0.1 at 2018-11-17 17:39:27 +0900
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (13.4ms)
+Completed 200 OK in 713ms (Views: 697.7ms | ActiveRecord: 1.0ms)
+
+
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (3.2ms)
+Completed 200 OK in 38ms (Views: 33.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 17:39:31 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (66.6ms)
+  Rendered users/new.html.slim within layouts/application (80.1ms)
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 1.0ms)
+
+
+
+NoMethodError - undefined method `submited' for #<User id: nil, created_at: nil, updated_at: nil>:
+  app/views/users/_form.html.slim:11:in `block in _app_views_users__form_html_slim__3091807344665752337_70269976259640'
+  app/views/users/_form.html.slim:1:in `_app_views_users__form_html_slim__3091807344665752337_70269976259640'
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim__1267653767373695877_70269972821140'
+
+Started POST "/__better_errors/8d7a0424952bddc8/variables" for 127.0.0.1 at 2018-11-17 17:39:31 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateUsers (20181117072524)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "memo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181117072524_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181117072524"]]
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-17 08:43:00.026735"], ["updated_at", "2018-11-17 08:43:00.026735"]]
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 17:43:07 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (13.6ms)
+  Rendered users/new.html.slim within layouts/application (36.4ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.5ms)
+
+
+
+NoMethodError - undefined method `submited' for #<User:0x00007fe7e60b6258>:
+  app/views/users/_form.html.slim:11:in `block in _app_views_users__form_html_slim___3904083873579880009_70316961651940'
+  app/views/users/_form.html.slim:1:in `_app_views_users__form_html_slim___3904083873579880009_70316961651940'
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim___2777896598517256416_70316986672080'
+
+Started POST "/__better_errors/8c9c96ac9a9e7946/variables" for 127.0.0.1 at 2018-11-17 17:43:07 +0900
+Started GET "/" for 127.0.0.1 at 2018-11-17 17:43:10 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (4.3ms)
+Completed 200 OK in 254ms (Views: 251.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 17:43:12 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (14.3ms)
+  Rendered users/new.html.slim within layouts/application (18.5ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `submited' for #<User:0x00007fe7e8f4c860>:
+  app/views/users/_form.html.slim:11:in `block in _app_views_users__form_html_slim___3904083873579880009_70317020138760'
+  app/views/users/_form.html.slim:1:in `_app_views_users__form_html_slim___3904083873579880009_70317020138760'
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim___2777896598517256416_70317007458280'
+
+Started POST "/__better_errors/6ae15b96b69b1e49/variables" for 127.0.0.1 at 2018-11-17 17:43:12 +0900
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 17:44:40 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (12.6ms)
+  Rendered users/new.html.slim within layouts/application (16.6ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.7ms)
+
+
+
+NoMethodError - undefined method `submited' for #<User:0x00007fe7e8ed1868>:
+  app/views/users/_form.html.slim:11:in `block in _app_views_users__form_html_slim___3904083873579880009_70317020108200'
+  app/views/users/_form.html.slim:1:in `_app_views_users__form_html_slim___3904083873579880009_70317020108200'
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim___2777896598517256416_70316990433220'
+
+Started POST "/__better_errors/faf17b35ca856c76/variables" for 127.0.0.1 at 2018-11-17 17:44:41 +0900
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 17:45:36 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (17.2ms)
+  Rendered users/new.html.slim within layouts/application (22.1ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `submited' for #<User:0x00007fe7ea9fd948>:
+  app/views/users/_form.html.slim:11:in `block in _app_views_users__form_html_slim___3904083873579880009_70317024754020'
+  app/views/users/_form.html.slim:1:in `_app_views_users__form_html_slim___3904083873579880009_70317024754020'
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim___2777896598517256416_70317025256080'
+
+Started POST "/__better_errors/6c7fbd6688488c3c/variables" for 127.0.0.1 at 2018-11-17 17:45:36 +0900
+Started GET "/" for 127.0.0.1 at 2018-11-17 17:46:01 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (9.9ms)
+Completed 200 OK in 345ms (Views: 332.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 17:46:03 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (23.6ms)
+  Rendered users/new.html.slim within layouts/application (27.3ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.7ms)
+
+
+
+NoMethodError - undefined method `submited' for #<User:0x00007fe7c1967f20>:
+  app/views/users/_form.html.slim:11:in `block in _app_views_users__form_html_slim__4605217598008538231_70316727875840'
+  app/views/users/_form.html.slim:1:in `_app_views_users__form_html_slim__4605217598008538231_70316727875840'
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim__1741203826232553367_70316650983160'
+
+Started POST "/__better_errors/222dc4478d04e1f9/variables" for 127.0.0.1 at 2018-11-17 17:46:03 +0900
+Started POST "/__better_errors/222dc4478d04e1f9/variables" for 127.0.0.1 at 2018-11-17 17:46:05 +0900
+Started POST "/__better_errors/222dc4478d04e1f9/variables" for 127.0.0.1 at 2018-11-17 17:46:08 +0900
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 17:47:15 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (12.9ms)
+  Rendered users/new.html.slim within layouts/application (17.8ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `submitted' for #<User:0x00007fe7bcf1ff80>:
+  app/views/users/_form.html.slim:11:in `block in _app_views_users__form_html_slim__4605217598008538231_70316694554980'
+  app/views/users/_form.html.slim:1:in `_app_views_users__form_html_slim__4605217598008538231_70316694554980'
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim__1741203826232553367_70316693109260'
+
+Started POST "/__better_errors/9264475a62167ad6/variables" for 127.0.0.1 at 2018-11-17 17:47:15 +0900
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 17:47:32 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (15.5ms)
+  Rendered users/new.html.slim within layouts/application (19.9ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `submitted' for #<User:0x00007fe7bf4c9088>:
+  app/views/users/_form.html.slim:11:in `block in _app_views_users__form_html_slim__4605217598008538231_70316662116820'
+  app/views/users/_form.html.slim:1:in `_app_views_users__form_html_slim__4605217598008538231_70316662116820'
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim__1741203826232553367_70316661923340'
+
+Started POST "/__better_errors/5f16f0da97e99685/variables" for 127.0.0.1 at 2018-11-17 17:47:32 +0900
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 17:48:17 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (12.6ms)
+  Rendered users/new.html.slim within layouts/application (16.4ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `submitted' for #<User:0x00007fe7c8263b78>:
+  app/views/users/_form.html.slim:11:in `block in _app_views_users__form_html_slim__4605217598008538231_70316719680220'
+  app/views/users/_form.html.slim:1:in `_app_views_users__form_html_slim__4605217598008538231_70316719680220'
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim__1741203826232553367_70316736058180'
+
+Started POST "/__better_errors/0e4c524286ee72f1/variables" for 127.0.0.1 at 2018-11-17 17:48:17 +0900
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 17:48:25 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (14.0ms)
+  Rendered users/new.html.slim within layouts/application (17.9ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 1.6ms)
+
+
+
+NoMethodError - undefined method `submitted' for #<User:0x00007fe7bf6e8378>:
+  app/views/users/_form.html.slim:11:in `block in _app_views_users__form_html_slim__4605217598008538231_70316663425320'
+  app/views/users/_form.html.slim:1:in `_app_views_users__form_html_slim__4605217598008538231_70316663425320'
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim__1741203826232553367_70316663132160'
+
+Started POST "/__better_errors/a7c5c28032acc086/variables" for 127.0.0.1 at 2018-11-17 17:48:26 +0900
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 17:51:01 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (16.0ms)
+  Rendered users/new.html.slim within layouts/application (20.9ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.6ms)
+
+
+
+NoMethodError - undefined method `submitted' for #<User:0x00007fe7c454d950>:
+  app/views/users/_form.html.slim:11:in `block in _app_views_users__form_html_slim__4605217598008538231_70316736113940'
+  app/views/users/_form.html.slim:1:in `_app_views_users__form_html_slim__4605217598008538231_70316736113940'
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim__1741203826232553367_70316664372540'
+
+Started POST "/__better_errors/4f2a326099b67ec3/variables" for 127.0.0.1 at 2018-11-17 17:51:01 +0900
+Started GET "/" for 127.0.0.1 at 2018-11-17 17:51:05 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (6.1ms)
+Completed 200 OK in 48ms (Views: 45.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 17:51:06 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (19.1ms)
+  Rendered users/new.html.slim within layouts/application (25.1ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `submitted' for #<User:0x00007fe7bf8eefc8>:
+  app/views/users/_form.html.slim:11:in `block in _app_views_users__form_html_slim__4605217598008538231_70316661983880'
+  app/views/users/_form.html.slim:1:in `_app_views_users__form_html_slim__4605217598008538231_70316661983880'
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim__1741203826232553367_70316663991660'
+
+Started POST "/__better_errors/fea02cd34fed8476/variables" for 127.0.0.1 at 2018-11-17 17:51:06 +0900
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 17:52:01 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (17.2ms)
+  Rendered users/new.html.slim within layouts/application (28.4ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.6ms)
+
+
+
+NoMethodError - undefined method `submitted' for #<User:0x00007fdbe048e2e8>:
+  app/views/users/_form.html.slim:11:in `block in _app_views_users__form_html_slim___2241772289886016101_70291169074640'
+  app/views/users/_form.html.slim:1:in `_app_views_users__form_html_slim___2241772289886016101_70291169074640'
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim__2452312590177274862_70291171584000'
+
+Started POST "/__better_errors/6717520a7d21edcf/variables" for 127.0.0.1 at 2018-11-17 17:52:01 +0900
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 17:52:59 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (31.7ms)
+  Rendered users/new.html.slim within layouts/application (36.5ms)
+Completed 200 OK in 397ms (Views: 381.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 17:53:41 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ETc8fYJqdr6pWCzJ3qS9JNHxFK4djktoYPBdaYrgIXAjhTSS4BNj9s10iK3C2X7mSdr2uUqcgRWOkNFDMQGH+g==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+
+
+NoMethodError - undefined method `mail' for #<User:0x00007fdbe4ce9d30>
+Did you mean?  email:
+  app/controllers/users_controller.rb:30:in `block in create'
+  app/controllers/users_controller.rb:29:in `create'
+
+Started POST "/__better_errors/73f8ca17dad419c7/variables" for 127.0.0.1 at 2018-11-17 17:53:41 +0900
+Started POST "/users" for 127.0.0.1 at 2018-11-17 17:54:51 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ETc8fYJqdr6pWCzJ3qS9JNHxFK4djktoYPBdaYrgIXAjhTSS4BNj9s10iK3C2X7mSdr2uUqcgRWOkNFDMQGH+g==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (10.1ms)
+  Rendered users/new.html.slim within layouts/application (16.4ms)
+Completed 200 OK in 66ms (Views: 51.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 17:54:55 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"21AWK9WNvIzpzkjI7sHikRMaYaCF4mS3FRvX1jh6oMfp4h7Et/SpxI3i7KzyvCFTizGDt9Lwrsr7e1v8g5sGTQ==", "user"=>{"submitted"=>"1", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Create (2.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "hiroshi"], ["email", "admin@example.com"], ["memo", "I am hero."], ["created_at", "2018-11-17 08:54:55.166521"], ["updated_at", "2018-11-17 08:54:55.166521"]]
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 8ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-11-17 17:54:55 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.slim within layouts/application
+  Rendered users/show.html.slim within layouts/application (2.8ms)
+Completed 200 OK in 669ms (Views: 27.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 17:54:58 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (5.5ms)
+Completed 200 OK in 51ms (Views: 41.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 17:55:03 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (10.3ms)
+  Rendered users/new.html.slim within layouts/application (15.6ms)
+Completed 200 OK in 57ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 17:55:13 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"69nV/KOM/0VpQAX2kekKReJpCJxPRHcY1+4c7lRKBDdedBSLr2XbNjJu4vn2HUFxQ97NLCZjxS/9+9kMNXeb4w==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>""}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.7ms)
+  Rendered users/new.html.slim within layouts/application (12.1ms)
+Completed 200 OK in 42ms (Views: 38.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 17:55:30 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXDTDMZ0Sd11WC7JYluoc+xRX28navkAQwUQbsGH65ifwtvjpA1clRF0iq1+JmuxdHq9eHB4M32tZZxEemZNEg==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.8ms)
+  Rendered users/new.html.slim within layouts/application (12.0ms)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 17:55:41 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N2f27zRLSIoZK/06sAEfJB/0eDdJKrFeDg+XVGTIFb0F1f4AVjJdwn0HWV6sfNzmh9+aIB44eyPgbxt+3ymzNw==", "user"=>{"submitted"=>"1", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "hiroshi"], ["email", "admin@example.com"], ["memo", "I am hero."], ["created_at", "2018-11-17 08:55:41.993105"], ["updated_at", "2018-11-17 08:55:41.993105"]]
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-11-17 17:55:42 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.slim within layouts/application
+  Rendered users/show.html.slim within layouts/application (2.5ms)
+Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 17:55:43 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (6.5ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 17:55:46 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (9.1ms)
+  Rendered users/new.html.slim within layouts/application (14.5ms)
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 17:55:51 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kSMLBX1Txg/x8tJWgTYdVPjbkpU6Ji74t0DZzUzOk7ckjspycbrifKrcNVnmwlZgWWxXJVMBnM+dVRwvLfMMYw==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (6.7ms)
+  Rendered users/new.html.slim within layouts/application (10.9ms)
+Completed 200 OK in 45ms (Views: 40.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 17:56:03 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (5.4ms)
+Completed 200 OK in 44ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 17:56:10 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (22.2ms)
+  Rendered users/new.html.slim within layouts/application (29.2ms)
+Completed 200 OK in 68ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 17:56:16 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q0HSzevWCQfGMPzuEPGwer1cmTvunpahHSLISVO4/LH27BO65z8tdJ0eG+F3BftOHOtci4e5JJY3Nw2rMoVjZQ==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.3ms)
+  Rendered users/new.html.slim within layouts/application (11.7ms)
+Completed 200 OK in 44ms (Views: 40.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 17:56:18 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (6.2ms)
+Completed 200 OK in 39ms (Views: 36.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 17:56:34 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (10.9ms)
+Completed 200 OK in 43ms (Views: 35.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 17:56:37 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (10.4ms)
+  Rendered users/new.html.slim within layouts/application (17.6ms)
+Completed 200 OK in 63ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 17:56:41 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uizH3nmf9VIiAPdutTnCVc8Q1cm5uyWu3P0SySHdrrgPgQapdXbRIXkuEGHSzYlhbqcQedCcl5n26NcrQOAxbA==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.6ms)
+  Rendered users/new.html.slim within layouts/application (12.6ms)
+Completed 200 OK in 49ms (Views: 45.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 17:56:43 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (6.5ms)
+Completed 200 OK in 41ms (Views: 38.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 17:58:15 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (11.4ms)
+Completed 200 OK in 43ms (Views: 37.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 17:58:17 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (10.3ms)
+  Rendered users/new.html.slim within layouts/application (18.3ms)
+Completed 200 OK in 63ms (Views: 59.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 17:58:21 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OIiON/UIiYHTC/rkafkZwukZ39g9aMu0zawQtCZi7x+NJU9A+eGt8oglHesODVL2SK4aaFRPeYPnudVWR19wyw==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.0ms)
+  Rendered users/new.html.slim within layouts/application (12.7ms)
+Completed 200 OK in 48ms (Views: 42.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 17:58:23 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (6.7ms)
+Completed 200 OK in 62ms (Views: 58.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 18:04:05 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.4ms)
+  Rendered users/new.html.slim within layouts/application (13.1ms)
+Completed 200 OK in 61ms (Views: 42.9ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 18:04:11 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GtcRowfXoab2Giz6eQGAZA0IEPYF766bndTTv1aaI5KvetDUCz6F1a00y/Ue9ctQrL/VRmzIHKy3wRZdN6e8Rg==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"kotoeri.tm@gmail.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.3ms)
+  Rendered users/new.html.slim within layouts/application (12.7ms)
+Completed 200 OK in 45ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 18:04:12 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oBtEByVWagXD0o+ZJW3eIqpuzIY43+jRRDOAw75s9MySqUzoRy9/Taf+K/05EB3gMkUukW/NIqyqUwzpBY1SRg==", "user"=>{"submitted"=>"1", "name"=>"hiroshi", "email"=>"kotoeri.tm@gmail.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "hiroshi"], ["email", "kotoeri.tm@gmail.com"], ["memo", "I am hero."], ["created_at", "2018-11-17 09:04:12.473414"], ["updated_at", "2018-11-17 09:04:12.473414"]]
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-11-17 18:04:12 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.slim within layouts/application
+  Rendered users/show.html.slim within layouts/application (2.9ms)
+Completed 200 OK in 32ms (Views: 28.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at 2018-11-17 18:04:15 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/edit.html.slim within layouts/application
+  Rendered users/_form.html.slim (10.2ms)
+  Rendered users/edit.html.slim within layouts/application (16.3ms)
+Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 18:04:17 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (7.7ms)
+Completed 200 OK in 57ms (Views: 47.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/3" for 127.0.0.1 at 2018-11-17 18:04:21 +0900
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lKAre7NtvBc/C7NV4RHHFPWrHsaF7t55jrcuh0laVwOmEiOU0RSpX1snFzH9bATWbYD80dL8FARg16Kt8rvxiQ==", "id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:57
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/users_controller.rb:57
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:57
+Redirected to http://localhost:3000/users
+Completed 302 Found in 11ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 18:04:21 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (6.8ms)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-17 18:05:13 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (9.8ms)
+Completed 200 OK in 64ms (Views: 60.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 18:05:14 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.6ms)
+  Rendered users/new.html.slim within layouts/application (13.2ms)
+Completed 200 OK in 47ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 18:05:20 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N6I0iEJzWNVAVl3XQpR2DoE2H2sjLglWqo3iaU/UjyqCD/X/Tpp8pht4utglYD06IIHa20oJu2GAmCeLLukQ/g==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.3ms)
+  Rendered users/new.html.slim within layouts/application (12.1ms)
+Completed 200 OK in 45ms (Views: 40.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 18:05:22 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zx7jzFl1sAMGhA3rrYVxPw/ABfCbMikJG1GVFxuLVzRVrOsjOwylS2KoqY+x+LL9l+vn58wg43T1MRk9oGrxvg==", "user"=>{"submitted"=>"1", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "hiroshi"], ["email", "admin@example.com"], ["memo", "I am hero."], ["created_at", "2018-11-17 09:05:22.621863"], ["updated_at", "2018-11-17 09:05:22.621863"]]
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 6ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2018-11-17 18:05:22 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.slim within layouts/application
+  Rendered users/show.html.slim within layouts/application (2.8ms)
+Completed 200 OK in 32ms (Views: 28.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2018-11-17 18:07:20 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.slim within layouts/application
+  Rendered users/show.html.slim within layouts/application (2.1ms)
+Completed 200 OK in 43ms (Views: 22.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 18:07:22 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (9.8ms)
+Completed 200 OK in 54ms (Views: 51.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 18:07:23 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.8ms)
+  Rendered users/new.html.slim within layouts/application (14.4ms)
+Completed 200 OK in 53ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 18:07:27 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0oh/O4bZHjKT/FoV6wH819XsTPqOexTinYKDkSgwnzhnJb5MijA6QcjSvRqM9bfjdFuJSudcptW3l0ZzSQ0A7A==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.1ms)
+  Rendered users/new.html.slim within layouts/application (12.4ms)
+Completed 200 OK in 47ms (Views: 42.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 18:07:29 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (8.0ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 18:07:31 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (10.0ms)
+  Rendered users/new.html.slim within layouts/application (16.4ms)
+Completed 200 OK in 52ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 18:08:10 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (13.0ms)
+  Rendered users/new.html.slim within layouts/application (19.7ms)
+Completed 200 OK in 66ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 18:08:15 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wVViCMgZiL0GjHy8flfngE2LQHePJwB7Lg3uMWrqc7l0+KN/xPCszl2im7MZo6y07DyFx+YAskwEGCvTC9fsbQ==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.9ms)
+  Rendered users/new.html.slim within layouts/application (13.3ms)
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 18:08:16 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (7.0ms)
+Completed 200 OK in 49ms (Views: 45.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:11:19 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (10.1ms)
+  Rendered users/new.html.slim within layouts/application (16.6ms)
+Completed 200 OK in 57ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:11:25 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1sb/92ST7fvUwiS+MkUnYGXiFe7aSfmq+s4qCs555iRjaz6AaHrJiI/sw7FVsWxUxFXQXrNuS53Q2+/or0R58A==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.6ms)
+  Rendered users/new.html.slim within layouts/application (13.7ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 19:11:26 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (8.6ms)
+Completed 200 OK in 60ms (Views: 56.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:12:31 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (26.9ms)
+  Rendered users/new.html.slim within layouts/application (51.5ms)
+Completed 200 OK in 381ms (Views: 365.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:12:36 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AxSymFHnFZ+XyPbQeRDctCAHryQP5ey9UvlTE5+PtCK2uXPvXQ4x7MzmEd8e5JeAgbBqlGbCXop47Jbx/rIr9g==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.8ms)
+  Rendered users/new.html.slim within layouts/application (12.4ms)
+Completed 200 OK in 49ms (Views: 43.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 19:22:08 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (21.1ms)
+Completed 200 OK in 63ms (Views: 59.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-11-17 19:22:09 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/edit.html.slim within layouts/application
+  Rendered users/_form.html.slim (9.2ms)
+  Rendered users/edit.html.slim within layouts/application (15.7ms)
+Completed 200 OK in 57ms (Views: 50.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-11-17 19:22:12 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.slim within layouts/application
+  Rendered users/show.html.slim within layouts/application (3.6ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 19:22:17 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:11
+  Rendered users/index.html.slim within layouts/application (8.6ms)
+Completed 200 OK in 55ms (Views: 51.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-11-17 19:22:18 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.slim within layouts/application
+  Rendered users/show.html.slim within layouts/application (3.4ms)
+Completed 200 OK in 45ms (Views: 41.4ms | ActiveRecord: 0.1ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateUsers (20181117102358)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "memo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181117102358_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181117102358"]]
+  ↳ bin/rails:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-17 10:25:40.667736"], ["updated_at", "2018-11-17 10:25:40.667736"]]
+  ↳ bin/rails:4
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/users/2" for 127.0.0.1 at 2018-11-17 19:25:49 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+Completed 404 Not Found in 16ms (ActiveRecord: 0.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=2:
+  app/controllers/users_controller.rb:67:in `set_user'
+
+Started POST "/__better_errors/5401ef34251d8464/variables" for 127.0.0.1 at 2018-11-17 19:25:50 +0900
+Started GET "/" for 127.0.0.1 at 2018-11-17 19:25:54 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (25.7ms)
+Completed 200 OK in 1510ms (Views: 1506.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:25:57 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (32.8ms)
+  Rendered users/new.html.slim within layouts/application (39.8ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `submited' for #<User:0x00007fe66e6f5c28>:
+  app/views/users/_form.html.slim:8:in `block in _app_views_users__form_html_slim___2333706032234748468_70313795727600'
+  app/views/users/_form.html.slim:1:in `_app_views_users__form_html_slim___2333706032234748468_70313795727600'
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim___180515782197595418_70313816955480'
+
+Started POST "/__better_errors/2191ba887434d8bd/variables" for 127.0.0.1 at 2018-11-17 19:25:57 +0900
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:27:06 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (10.9ms)
+  Rendered users/new.html.slim within layouts/application (14.9ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `submitted' for #<User:0x00007fe66c736248>:
+  app/views/users/_form.html.slim:8:in `block in _app_views_users__form_html_slim___2333706032234748468_70313751813120'
+  app/views/users/_form.html.slim:1:in `_app_views_users__form_html_slim___2333706032234748468_70313751813120'
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim___180515782197595418_70313819418560'
+
+Started POST "/__better_errors/dcfd12d354e86890/variables" for 127.0.0.1 at 2018-11-17 19:27:06 +0900
+Started GET "/" for 127.0.0.1 at 2018-11-17 19:27:17 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (11.8ms)
+Completed 200 OK in 58ms (Views: 54.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:27:19 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (15.7ms)
+  Rendered users/new.html.slim within layouts/application (20.6ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `submitted' for #<User:0x00007fe66e767198>:
+  app/views/users/_form.html.slim:8:in `block in _app_views_users__form_html_slim___2333706032234748468_70313790610520'
+  app/views/users/_form.html.slim:1:in `_app_views_users__form_html_slim___2333706032234748468_70313790610520'
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim___180515782197595418_70313836228280'
+
+Started POST "/__better_errors/88e7ec915c7d956e/variables" for 127.0.0.1 at 2018-11-17 19:27:19 +0900
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:27:56 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (11.5ms)
+  Rendered users/new.html.slim within layouts/application (15.2ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.7ms)
+
+
+
+NoMethodError - undefined method `submitted' for #<User:0x00007fe6701e92f0>:
+  app/views/users/_form.html.slim:8:in `block in _app_views_users__form_html_slim___2333706032234748468_70313779005680'
+  app/views/users/_form.html.slim:1:in `_app_views_users__form_html_slim___2333706032234748468_70313779005680'
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim___180515782197595418_70313810467040'
+
+Started POST "/__better_errors/f8718157a7d9ae2f/variables" for 127.0.0.1 at 2018-11-17 19:27:56 +0900
+Started GET "/" for 127.0.0.1 at 2018-11-17 19:27:58 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (5.0ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:28:00 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (18.9ms)
+  Rendered users/new.html.slim within layouts/application (23.9ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `submitted' for #<User:0x00007fe66b5b87f0>:
+  app/views/users/_form.html.slim:8:in `block in _app_views_users__form_html_slim___2333706032234748468_70313813226360'
+  app/views/users/_form.html.slim:1:in `_app_views_users__form_html_slim___2333706032234748468_70313813226360'
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim___180515782197595418_70313810155840'
+
+Started POST "/__better_errors/33140bb65db01bf0/variables" for 127.0.0.1 at 2018-11-17 19:28:00 +0900
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:28:48 +0900
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - wrong argument type Symbol (expected Module):
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<main>'
+  app/controllers/users_controller.rb:17:in `new'
+
+Started POST "/__better_errors/f5794ca23c41c812/variables" for 127.0.0.1 at 2018-11-17 19:28:48 +0900
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:29:22 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (18.9ms)
+  Rendered users/new.html.slim within layouts/application (22.8ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.8ms)
+
+
+
+NoMethodError - undefined method `password' for #<User:0x00007fe66e6a58b8>:
+  app/views/users/_form.html.slim:36:in `block in _app_views_users__form_html_slim___2333706032234748468_70313761901580'
+  app/views/users/_form.html.slim:1:in `_app_views_users__form_html_slim___2333706032234748468_70313761901580'
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim___180515782197595418_70313835781080'
+
+Started POST "/__better_errors/5d706cde447a238d/variables" for 127.0.0.1 at 2018-11-17 19:29:22 +0900
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:30:02 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (6.3ms)
+  Rendered users/new.html.slim within layouts/application (10.6ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:31:03 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (2.6ms)
+  Rendered users/new.html.slim within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+
+Slim::Parser::SyntaxError - Malformed indentation
+  /Users/pj/Sample-Rails-Confirmable/app/views/users/_form.html.slim, Line 14, Column 4
+    .field
+    ^
+:
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim___180515782197595418_70313813357480'
+
+Started POST "/__better_errors/236cade1bac405fb/variables" for 127.0.0.1 at 2018-11-17 19:31:03 +0900
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:31:43 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (3.5ms)
+  Rendered users/new.html.slim within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+
+Slim::Parser::SyntaxError - Malformed indentation
+  /Users/pj/Sample-Rails-Confirmable/app/views/users/_form.html.slim, Line 14, Column 4
+    .field
+    ^
+:
+  app/views/users/new.html.slim:3:in `_app_views_users_new_html_slim___180515782197595418_70313837870040'
+
+Started POST "/__better_errors/451e0114b2958457/variables" for 127.0.0.1 at 2018-11-17 19:31:43 +0900
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:32:00 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (9.3ms)
+  Rendered users/new.html.slim within layouts/application (14.9ms)
+Completed 200 OK in 49ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:32:06 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M5U+a3UcbKc+laeWEUlXYEo+ATDAH/AGgYD4EjNMe8YBJzaEF2V571q5A/INNJSi0hXjJ5cNOntv4HQ4iK3dTA==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (6.1ms)
+  Rendered users/new.html.slim within layouts/application (10.2ms)
+Completed 200 OK in 40ms (Views: 35.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:32:07 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n95ri6AQatK2RzV+cweIz40nnrXDZT407lTU+oDUg6WtbGNkwml/mtJrkRpveksNFQx8opR39EkANFjQOzUlLw==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (6.1ms)
+  Rendered users/new.html.slim within layouts/application (10.7ms)
+Completed 200 OK in 39ms (Views: 36.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 19:32:16 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (5.9ms)
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:32:17 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.9ms)
+  Rendered users/new.html.slim within layouts/application (14.3ms)
+Completed 200 OK in 55ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:32:22 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hbqiH7Eq/T4Xi8/gxFd7qEcUWCUS5pTSY9HbY15wr2wwF2NovcPZTUylKO+jozCc5qOdlXvBJuVJxB6BP00wuA==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.3ms)
+  Rendered users/new.html.slim within layouts/application (12.6ms)
+Completed 200 OK in 48ms (Views: 44.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 19:33:00 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (5.6ms)
+Completed 200 OK in 36ms (Views: 30.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:33:02 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (11.2ms)
+  Rendered users/new.html.slim within layouts/application (17.9ms)
+Completed 200 OK in 80ms (Views: 54.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:33:06 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OMF2onTt1Ff4ZQOqlvyxUy5dj9871yD8SJ7klXdRd82NbLfVeATwJKNL5KXxCPpnj+pKb1LwkstiiyF3FmzoGQ==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.4ms)
+  Rendered users/new.html.slim within layouts/application (12.6ms)
+Completed 200 OK in 48ms (Views: 43.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:33:07 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FqvBCagJ45B447ipoe4NuelYEa+wzM6D6w7zM3W/BDEkGcnmynD22BzPHM29k857cXPzuOfeBP4Fbn8Zzl6iuw==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.4ms)
+  Rendered users/new.html.slim within layouts/application (12.3ms)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 19:33:08 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (9.3ms)
+Completed 200 OK in 55ms (Views: 50.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 19:36:09 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (5.5ms)
+Completed 200 OK in 38ms (Views: 33.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:36:11 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (10.3ms)
+  Rendered users/new.html.slim within layouts/application (16.8ms)
+Completed 200 OK in 55ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:36:15 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fSPonbXffis8D6M1ntlhh56uEtxT76Ukh3nU6P//1E7IjinquTZaWGchRDr5LSqzPxnXbDrIFxOtbBEKnsJLmg==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.9ms)
+  Rendered users/new.html.slim within layouts/application (12.4ms)
+Completed 200 OK in 46ms (Views: 42.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:36:16 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j8woxTsXjXOfsG793061VB0TqwtURFqRnvBkolcpLNm9fiAqWW6YO/ucypnDM3aWhThJHANWkOxwkOiI7MiKUw==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.4ms)
+  Rendered users/new.html.slim within layouts/application (12.6ms)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:36:17 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0jgJtCss7FOMb/jE7kEXTdarSfCalkOMvePbUHUeIzzgigFbSVX5G+hDXKDyPNSPToCr582EifFTg1d6zv+Ftg==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.4ms)
+  Rendered users/new.html.slim within layouts/application (13.6ms)
+Completed 200 OK in 53ms (Views: 49.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:36:18 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OJ/TJrSQvR5/olJZdXP/Gb91ktNPhb684mgGcWlh6lIKLdvJ1umoVhuO9j1pDjzbJ15wxBiXdMEMCIpb0oBM2A==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.0ms)
+  Rendered users/new.html.slim within layouts/application (12.5ms)
+Completed 200 OK in 43ms (Views: 40.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 19:38:41 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (5.5ms)
+Completed 200 OK in 38ms (Views: 32.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:38:42 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (11.3ms)
+  Rendered users/new.html.slim within layouts/application (17.6ms)
+Completed 200 OK in 70ms (Views: 56.8ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:38:46 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VJjb3E4PXfAII4ylPfDA8uR63SDeJVSnUZuQ2/5eA/jhNRqrQuZ5g1MNa6paBIvGRc0YkLcC5pB7jlU5n2OcLA==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.1ms)
+  Rendered users/new.html.slim within layouts/application (13.2ms)
+Completed 200 OK in 45ms (Views: 40.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:38:48 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J8S4uFGiT/3iv3lIXR6K+lHDp+IbAfoi5AFqiksBcf8VdrBXM9tatYaT3SxBY0k4yehF9UwTMF8KYeag8ODXdQ==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.0ms)
+  Rendered users/new.html.slim within layouts/application (13.2ms)
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:42:44 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SVW96R73DDEZ/si1pFgBfUt0umVAnwfLDiRvqk6gWVR757UGfI4ZeX3SbNG4JcK/019YcheNzbbgROOA9UH/3g==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (9.0ms)
+  Rendered users/new.html.slim within layouts/application (14.0ms)
+Completed 200 OK in 49ms (Views: 45.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:43:27 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bkPfCDfKwWixybTudKWeUyAw4NqAAr0SsMKX8NXaiwxc8dfnVbPUINXlEIpo2F2RuBsCzdcQd29eohvabjsthg==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.1ms)
+  Rendered users/new.html.slim within layouts/application (13.0ms)
+Completed 200 OK in 58ms (Views: 53.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 19:43:28 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (9.7ms)
+Completed 200 OK in 54ms (Views: 50.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:43:29 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (11.9ms)
+  Rendered users/new.html.slim within layouts/application (18.6ms)
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:43:34 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x1A5VZczP6S+sDBe/03R3+fIHkl21eJePemgWorTE4xy/fgim9ob1+We11GYuZrrRn/b+R/yUGkX/GW46+6MWA==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.4ms)
+  Rendered users/new.html.slim within layouts/application (12.3ms)
+Completed 200 OK in 44ms (Views: 40.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:54:15 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q10WzODnrH+gJTihANsmagzJXNB9Ds62xHa8RDG4DN5x7x4jgp65N8QJnMUcpuWolOK+xyocBMsqFjBuilmqVA==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (6.6ms)
+  Rendered users/new.html.slim within layouts/application (11.2ms)
+Completed 200 OK in 48ms (Views: 43.8ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateUsers (20181117102358)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "memo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181117102358_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181117102358"]]
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-17 10:54:35.119722"], ["updated_at", "2018-11-17 10:54:35.119722"]]
+  ↳ bin/rails:4
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:54:40 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HQbmujJNgpRjG9W0o3h+9vdfu+uGKAB+tjNmQIicbUcvtO5VUDSX3Ac3cdC/Bb00b3RZ/NE6ygNYU+pqM33LzQ==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (15.2ms)
+  Rendered users/new.html.slim within layouts/application (26.6ms)
+Completed 200 OK in 445ms (Views: 422.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 19:54:43 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (8.0ms)
+Completed 200 OK in 49ms (Views: 45.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:54:44 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (13.9ms)
+  Rendered users/new.html.slim within layouts/application (20.9ms)
+Completed 200 OK in 68ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:54:48 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TdApR6RMGNuJuJxB/PC9JtWHFR2d5P9LakP4pAA3Hx/4fegwqKU8qNKWe06bBPYSdDDQrfTDTXxAVj1GYQqAyw==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.4ms)
+  Rendered users/new.html.slim within layouts/application (12.3ms)
+Completed 200 OK in 46ms (Views: 41.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:54:49 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"REjqUzxQvT3JstW/VLuLeUcw7AWarH5MJx/ZuzEgblt2+uK8Ximoda2ecdtIxki73xsOEs2+tDHJf1WRisHI0Q==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (6.9ms)
+  Rendered users/new.html.slim within layouts/application (11.2ms)
+Completed 200 OK in 45ms (Views: 42.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 19:55:41 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (5.5ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:55:43 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (13.8ms)
+  Rendered users/new.html.slim within layouts/application (20.7ms)
+Completed 200 OK in 65ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:55:46 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DaVPjEjHub93/eY7Tm6KuM1OvxuqOGd/MaymnOw/kV24CI77RC6dzCzTATQpmsGMbPl6q8Mf1UgbuWN+jQIOiQ==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.4ms)
+  Rendered users/new.html.slim within layouts/application (12.2ms)
+Completed 200 OK in 43ms (Views: 39.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:55:48 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zUo9cH1pusxSwbrp3ED7LxClqQq8NkPasYpFDtOYDFf/+DWfHxCvhDbtHo3APTjtiI5LHeskiadf6skkaHmq3Q==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.6ms)
+  Rendered users/new.html.slim within layouts/application (12.3ms)
+Completed 200 OK in 66ms (Views: 61.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 19:56:30 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (6.0ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:56:32 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (12.8ms)
+  Rendered users/new.html.slim within layouts/application (19.6ms)
+Completed 200 OK in 65ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:56:46 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.5ms)
+  Rendered users/new.html.slim within layouts/application (14.6ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:56:47 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.2ms)
+  Rendered users/new.html.slim within layouts/application (11.2ms)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:56:48 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.6ms)
+  Rendered users/new.html.slim within layouts/application (11.8ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 19:56:50 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (8.6ms)
+Completed 200 OK in 56ms (Views: 51.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:56:50 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (10.6ms)
+  Rendered users/new.html.slim within layouts/application (15.9ms)
+Completed 200 OK in 66ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:56:58 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.3ms)
+  Rendered users/new.html.slim within layouts/application (12.0ms)
+Completed 200 OK in 45ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:56:59 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (9.6ms)
+  Rendered users/new.html.slim within layouts/application (14.5ms)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:57:27 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (11.7ms)
+  Rendered users/new.html.slim within layouts/application (22.7ms)
+Completed 200 OK in 303ms (Views: 285.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 19:57:29 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (9.4ms)
+Completed 200 OK in 58ms (Views: 53.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:57:30 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (10.4ms)
+  Rendered users/new.html.slim within layouts/application (16.9ms)
+Completed 200 OK in 66ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:57:33 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/sppJOIfx5gfG0vNH+X+PcFMazCFOjP7fuaL381QgMxLZ6hT7vbj60Q1rMJ4EbUJYPuugOwdgcxU8049rG0fGA==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (38.9ms)
+  Rendered users/new.html.slim within layouts/application (43.2ms)
+Completed 200 OK in 77ms (Views: 70.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:57:34 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jV1h6MW+2w7YS7LEBOcSH4Jx+lGUvxMz+I2K28LL3NW/72kHp8fORrxnFqAYmtHdGloYRsOt2U4W7QbxeSp6Xw==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.2ms)
+  Rendered users/new.html.slim within layouts/application (13.2ms)
+Completed 200 OK in 51ms (Views: 47.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 19:58:28 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (30.1ms)
+Completed 200 OK in 335ms (Views: 322.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 19:58:29 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (21.7ms)
+  Rendered users/new.html.slim within layouts/application (29.1ms)
+Completed 200 OK in 80ms (Views: 65.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:58:33 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ds/hsD6s+SwbSZQbE8VQNfttleeq6sfdqrnPnG8hzPjDYiDHMkXdX0BncxR0MRsBWtpQV8PNdeqArAp+DhxTLA==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (6.9ms)
+  Rendered users/new.html.slim within layouts/application (11.9ms)
+Completed 200 OK in 48ms (Views: 42.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 19:58:34 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NbWzcuCiNFh5AIpj+qmuVN8mu49x/yPPlkvB+NWKDpUHB7udgtshEB0sLgfm1G2WRw1ZmCbt6bJ4K03SbmuoHw==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.2ms)
+  Rendered users/new.html.slim within layouts/application (11.5ms)
+Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 20:00:19 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (5.6ms)
+Completed 200 OK in 42ms (Views: 36.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 20:00:29 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (10.9ms)
+Completed 200 OK in 95ms (Views: 91.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 20:00:32 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (16.0ms)
+  Rendered users/new.html.slim within layouts/application (23.8ms)
+Completed 200 OK in 75ms (Views: 61.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:00:35 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vfNatp2zEY7ffitApUtk0cv+5Ul5FAjJVCnR+W3sycYIXpvBkVo1/YRQzE/Cvy/lakkg+RAzuv5+PBQbDNFWEg==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.7ms)
+  Rendered users/new.html.slim within layouts/application (13.1ms)
+Completed 200 OK in 47ms (Views: 42.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:00:36 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bs+1naNnhmb/hHFv6jMWj0c/Kzo91Mmj1eQjk90nK8M0fb1ywR6TLpuo1Qv2TtVN3xTJLWrGA947hK+5ZsaNSQ==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.5ms)
+  Rendered users/new.html.slim within layouts/application (12.3ms)
+Completed 200 OK in 83ms (Views: 79.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 20:04:38 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (7.5ms)
+Completed 200 OK in 40ms (Views: 34.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 20:04:39 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (15.6ms)
+  Rendered users/new.html.slim within layouts/application (22.0ms)
+Completed 200 OK in 76ms (Views: 63.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:04:43 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MR20/LrqeYjODcanPuT5QLtpBa1V+4JIHIoTlV0OEISEsHWLtgNd+5UjIahZELJ0Gt7AHTzcMH82n9Z3PDOPUA==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.8ms)
+  Rendered users/new.html.slim within layouts/application (13.9ms)
+Completed 200 OK in 49ms (Views: 45.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:04:45 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jCE9gT65tCWz2LItO/pvkIkkjYSTannbTRprFPXYCWy+kzVuXMChbdf0Fkknh6xSEQ9vk8R4s6ajeuc+Tjmv5g==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero.", "confirmed"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (9.7ms)
+  Rendered users/new.html.slim within layouts/application (15.2ms)
+Completed 200 OK in 56ms (Views: 52.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:04:46 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IUGRa+ewRSnJV0Ba182t/22gAB52NNrRQJWKVMUIKRET85mEhclQYa175D7LsG499YviCSEmEKyu9QZ+fumPmw==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (17.5ms)
+  Rendered users/new.html.slim within layouts/application (23.7ms)
+Completed 200 OK in 63ms (Views: 58.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:04:49 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T+MDQl8fa4EaDCM46nIzvLymQWiRimJQtTtNDQF+vOR9UQutPWZ+yX4gh1z2D/B+JI2jf8aYqC1bW8Enup8abg==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero.", "confirmed"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (9.2ms)
+  Rendered users/new.html.slim within layouts/application (14.0ms)
+Completed 200 OK in 49ms (Views: 45.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:04:50 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v/S+nRpl1/xDFImy/e0pvGc2SwDB+GQ2U6dAkU87Ov6NRrZyeBzCtCc4LdbhkOp+/x2pF5bqrku9x8y79NqcdA==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (11.5ms)
+  Rendered users/new.html.slim within layouts/application (17.7ms)
+Completed 200 OK in 57ms (Views: 53.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:04:52 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EK3TU9uhffMNa5NNdgIN7eBloPIo5WaKdBXxf7YSlQEiH9u8udhou2lHNylqf84veE5C5X/3rPeadX1VDfMziw==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero.", "confirmed"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (10.0ms)
+  Rendered users/new.html.slim within layouts/application (15.4ms)
+Completed 200 OK in 54ms (Views: 49.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:05:00 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nLh2w+gakH3v+Uid07Ab/XRxXncWWpnCDnudMiL5agyuCn4simOFNYvV7PnPzdg/7Fq8YEFIU7/gGxEYmRjMhg==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero.", "confirmed"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.9ms)
+  Rendered users/new.html.slim within layouts/application (11.9ms)
+Completed 200 OK in 57ms (Views: 52.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:05:11 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iP/P0ZIPFJzEIXjnZrzanpKw8wKbV0FHlJ8PRlwMUta6Tcc+8HYB1KAN3IN6wRlcCpsRFcxFizp6/4Ns5+30XA==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero.", "confirmed"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.3ms)
+  Rendered users/new.html.slim within layouts/application (12.5ms)
+Completed 200 OK in 49ms (Views: 43.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:05:15 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TFCxFqx1vpIHFlGgqxl0gb0yqFDsIgp8MAjrhpfNsCN+4rn5zgyr2mM69cS3ZLdDJRlKR7swwAHeaGesLCwWqQ==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero test."}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.0ms)
+  Rendered users/new.html.slim within layouts/application (12.5ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:05:17 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U4/2iBaHp6brr/Oz/bm8dzdcZCXZppi5IUtZ4gnEEahhPf5ndP6y7o+DV9fhxH+1r3eGMo60UsTPK9XIsiW3Ig==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero test.", "confirmed"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.2ms)
+  Rendered users/new.html.slim within layouts/application (13.6ms)
+Completed 200 OK in 47ms (Views: 43.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 20:07:46 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (5.5ms)
+Completed 200 OK in 36ms (Views: 33.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 20:07:48 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (14.3ms)
+  Rendered users/new.html.slim within layouts/application (23.1ms)
+Completed 200 OK in 79ms (Views: 75.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:07:52 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5rLJeMz2RlUS+z643Aol6wpRbWM61oHGwXVBQ3J1CxlTHwgPwB9iJknV2be7/m7fq+ao01PxM/HrYIShE0iUzQ==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"入力内容を確認する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.9ms)
+  Rendered users/new.html.slim within layouts/application (12.9ms)
+Completed 200 OK in 46ms (Views: 42.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:07:55 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+2Gsbmozh01nwxkhDT6CGTAK5KObAmHSmb+hF1Wuk6XJ06SBCEqSBQPvvUURQ0HbqCEGtMwQq6933y097k81Lw==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero.", "confirmed"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.5ms)
+  Rendered users/new.html.slim within layouts/application (11.8ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 20:08:50 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (6.9ms)
+Completed 200 OK in 49ms (Views: 45.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 20:08:51 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (5.9ms)
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 20:08:53 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (16.7ms)
+  Rendered users/new.html.slim within layouts/application (26.4ms)
+Completed 200 OK in 81ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:08:58 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f8sKdICyQyirH3lnOIY2DwJnLk80xe+FwTrI8+nROrLKZssDjFtnW/Axnmhfcn07o9Dr/13iXbLrLw0RiOylZg==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"入力内容を確認する"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.0ms)
+  Rendered users/new.html.slim within layouts/application (12.1ms)
+Completed 200 OK in 47ms (Views: 41.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:08:59 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H4UHMdn6U6AFjeJ1DalpwYqfsSnS0p4Fa3XcOOL3YaQtNw/eu4NG6GGhRhER1KoDErRTPoXAVHiFFVASWRbHLg==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero.", "confirmed"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.2ms)
+  Rendered users/new.html.slim within layouts/application (12.3ms)
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:10:28 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rpYhP95J1ehhCm2BXfNc6JiI1kcQwVwWCAU1J7GSThOcJCnQvDDAoAUmyeVBjp8qAKM0UEfTlmvmZbkNCnPomQ==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero.", "confirmed"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.4ms)
+  Rendered users/new.html.slim within layouts/application (11.6ms)
+Completed 200 OK in 44ms (Views: 39.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 20:10:31 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (7.4ms)
+Completed 200 OK in 49ms (Views: 45.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 20:10:32 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (14.1ms)
+  Rendered users/new.html.slim within layouts/application (20.6ms)
+Completed 200 OK in 67ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:10:35 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yq6z30wsu1YnDWKxHqlEjYKE86Hu/yVuOIRMUNGq9YvXA3KoQMWfJXwjhb55XQ+5IzM2EYfYl1kSkYmysJdqXw==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"入力内容を確認する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.9ms)
+  Rendered users/new.html.slim within layouts/application (13.1ms)
+Completed 200 OK in 51ms (Views: 47.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:10:36 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1pqYFVGaz1HfcS1SRv2G/UPxStDfZ8MmsMNlzsRbJ73kKJD6M+PaGbtdiTZagEU/29qox4h1CVteo+nkf7qBNw==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero.", "confirmed"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (11.7ms)
+  Rendered users/new.html.slim within layouts/application (18.1ms)
+Completed 200 OK in 71ms (Views: 66.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:10:37 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dpd6kCDrV2cvT51wINlmPY5raVN+hNQ2b2ZCpQOF0so8JXJ/QpJCL0tjORQ8pKX/FkCLRCmWHkuBBs6PuGR0QA==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero.", "confirmed"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (9.1ms)
+  Rendered users/new.html.slim within layouts/application (14.4ms)
+Completed 200 OK in 60ms (Views: 55.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 20:13:39 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (6.0ms)
+Completed 200 OK in 40ms (Views: 33.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 20:13:40 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (11.5ms)
+  Rendered users/new.html.slim within layouts/application (29.9ms)
+Completed 200 OK in 74ms (Views: 61.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:13:44 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tTfWHFK7N7OTt2coXOR9IStOq4v9OdbkRBGSjElHyNYAmhdrXlITwMiZgCc7EDYVivluO5QeZNNuBFduKHpXAg==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"入力内容を確認する"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (9.9ms)
+  Rendered users/new.html.slim within layouts/application (15.3ms)
+Completed 200 OK in 60ms (Views: 53.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:13:45 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fY6vphgrUOyabq43776x7Y7kzIa1KcFvcMFVlrM3xvpPPKdJelJFpP5CClPzw3IvFs8ukeI7CxKeodm8CNZgcA==", "user"=>{"submitted"=>"1", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero.", "confirmed"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "hiroshi"], ["email", "admin@example.com"], ["memo", "I am hero."], ["created_at", "2018-11-17 11:13:45.837359"], ["updated_at", "2018-11-17 11:13:45.837359"]]
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 11ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-11-17 20:13:45 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.slim within layouts/application
+  Rendered users/show.html.slim within layouts/application (4.2ms)
+Completed 200 OK in 53ms (Views: 45.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 20:13:57 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (7.1ms)
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 20:13:59 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (10.5ms)
+  Rendered users/new.html.slim within layouts/application (16.5ms)
+Completed 200 OK in 60ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:14:04 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6/JCnvcNtOTD/+2nQeOYUSNnje2WelA7/UELK+rSfE1eX4Pp++SQl5jRCqgmF9NlgtBIXf9d4gzXVM7Ji+/jmQ==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero test."}, "commit"=>"入力内容を確認する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.3ms)
+  Rendered users/new.html.slim within layouts/application (12.8ms)
+Completed 200 OK in 51ms (Views: 47.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:14:05 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BBm6lOskza7gx5EHi+qxmsPSo4AU/l9XtbX0mnw/qaI2q7J7iV3Y5oTrNWOXl3JYW/lBl0PslSpb1Xiwx94PKA==", "user"=>{"submitted"=>"1", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero test.", "confirmed"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (13.9ms)
+  Rendered users/new.html.slim within layouts/application (21.7ms)
+Completed 200 OK in 74ms (Views: 69.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:14:06 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mNYQkK0kpsafO/IENNiCGtBhPJ1wG3le0NUpnS68xJaqZBh/z12zjvsXVmAopUHYSEreiicJsyM+taW3lV1iHA==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero test."}, "commit"=>"入力内容を確認する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (11.1ms)
+  Rendered users/new.html.slim within layouts/application (19.9ms)
+Completed 200 OK in 69ms (Views: 64.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:14:07 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"epqCwXsddF5AOCJCV7JtOUbjboDC9wMrNvGw+D8A/SJIKIouGWRhFiQUhiZLz6773siMl5XlyVbYkTzShOFbqA==", "user"=>{"submitted"=>"1", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero test.", "confirmed"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "hiroshi"], ["email", "admin@example.com"], ["memo", "I am hero test."], ["created_at", "2018-11-17 11:14:07.679355"], ["updated_at", "2018-11-17 11:14:07.679355"]]
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 12ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-11-17 20:14:07 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.slim within layouts/application
+  Rendered users/show.html.slim within layouts/application (3.4ms)
+Completed 200 OK in 45ms (Views: 41.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 20:14:09 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (10.3ms)
+Completed 200 OK in 62ms (Views: 59.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-11-17 20:14:10 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.slim within layouts/application
+  Rendered users/show.html.slim within layouts/application (16.3ms)
+Completed 200 OK in 59ms (Views: 54.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-11-17 20:14:12 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.slim within layouts/application
+  Rendered users/show.html.slim within layouts/application (5.0ms)
+Completed 200 OK in 56ms (Views: 51.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 20:16:05 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (11.5ms)
+Completed 200 OK in 42ms (Views: 35.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 20:16:06 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (12.3ms)
+  Rendered users/new.html.slim within layouts/application (18.7ms)
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:16:10 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"37jBR3OpU6yjML8i64i6zxmP8vBE5gC8rPgYctWJY0pqFQAwf0B33/geWC2MfPH7uDg3QC3BsouG7d2QtLT8ng==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"入力内容を確認する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.2ms)
+  Rendered users/new.html.slim within layouts/application (11.8ms)
+Completed 200 OK in 45ms (Views: 41.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:16:12 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jv7EkKCp2cHyiZNtbd6tCozuEjrNh8KG+K03QmrU1r28TMx/wtDMiZalNwlxo27IFMXwLZqVCPsWzbto0TVwNw==", "user"=>{"submitted"=>"true", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero.", "confirmed"=>"false"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (6.9ms)
+  Rendered users/new.html.slim within layouts/application (10.9ms)
+Completed 200 OK in 50ms (Views: 45.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:16:13 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7+O8cYC2ZRmu/1QuRzhP/qgofiHxEP0QNHccb1vxmejdUbSe4s9wUcrT8EpbRYw8MAOcNqYCN23aF5BF4BA/Yg==", "user"=>{"submitted"=>"true", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"入力内容を確認する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.0ms)
+  Rendered users/new.html.slim within layouts/application (12.9ms)
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:16:14 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t7R4hssxFTh2O2rK0A8k2z55b6MkFJJrZ30ugUpozUCFBnBpqUgAcBIXzq7McucZplKNtHMGWBaJHaKr8Ylryg==", "user"=>{"submitted"=>"true", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"入力内容を確認する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.3ms)
+  Rendered users/new.html.slim within layouts/application (12.4ms)
+Completed 200 OK in 44ms (Views: 41.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:16:15 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xsqb/WYyDjKhsaQ92dk8TQ/h9PuSE7DFSrRRPEDt11xseJMSBEsbesWdAFnFpP+Pl8oW7MUBerik1N0W+wxx1g==", "user"=>{"submitted"=>"true", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"入力内容を確認する"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (9.3ms)
+  Rendered users/new.html.slim within layouts/application (14.2ms)
+Completed 200 OK in 52ms (Views: 46.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:16:15 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C0X/UZk1Ikeq9ClEZjTLReadUg0JdgcnLlq5tEroxrg59/e++0w3D87YjSB6SQiHfrawGl5kzVrAOjWe8QlgMg==", "user"=>{"submitted"=>"true", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"入力内容を確認する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (10.1ms)
+  Rendered users/new.html.slim within layouts/application (15.0ms)
+Completed 200 OK in 74ms (Views: 68.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:16:16 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Evbnvi99+Ipg/LhfmHr2JLABxauTYYz+xUhK6lIN38AgRO9RTQTtwgTQHDuEBzXmKConvMRzRoMrKMbA6ex5Sg==", "user"=>{"submitted"=>"true", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"入力内容を確認する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (10.5ms)
+  Rendered users/new.html.slim within layouts/application (15.7ms)
+Completed 200 OK in 64ms (Views: 59.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:16:23 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+O1ZKhRjReGiNRsDhP6KLCuDZ4KrzFCwxwXClrkVvFLKX1HFdhpQqcYZv2eYg0nus6iFlfzems0pZU68AvQa2A==", "user"=>{"submitted"=>"true", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"入力内容を確認する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.0ms)
+  Rendered users/new.html.slim within layouts/application (13.4ms)
+Completed 200 OK in 46ms (Views: 41.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 20:16:39 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (6.7ms)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 20:16:41 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (12.5ms)
+  Rendered users/new.html.slim within layouts/application (19.2ms)
+Completed 200 OK in 62ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:16:45 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IQNd4zcQigokKGb7IPUetp2E7BmRFst6hbiHWh/jImKUrpyUO/mueX8GgfRHAVWCPDMpqfgxeU2vrUK4ft69tg==", "user"=>{"submitted"=>"", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"入力内容を確認する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.1ms)
+  Rendered users/new.html.slim within layouts/application (12.8ms)
+Completed 200 OK in 48ms (Views: 43.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:16:46 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+6iWOmctiXjv5VFvXsaomZq16v2v25sIjb+kIOkKQa7JGp7VBVScMIvJ9QtCu2tbAp4I6vjJUXVj3ygKUuvnJA==", "user"=>{"submitted"=>"true", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero.", "confirmed"=>"false"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.9ms)
+  Rendered users/new.html.slim within layouts/application (12.3ms)
+Completed 200 OK in 45ms (Views: 41.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:16:47 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ybZvANVFXpw+vrnH+bYrON0oRtDpgnW8eDqHSNSNXiD7BGfvtzxL1FqSHaPly+j6RQOkx76Qv8GWWgtib2z4qg==", "user"=>{"submitted"=>"true", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"入力内容を確認する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (8.8ms)
+  Rendered users/new.html.slim within layouts/application (14.5ms)
+Completed 200 OK in 53ms (Views: 49.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:16:49 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C+L8ZeRybsS/ihyRKBz1lfsIJlFf7Zr//v0fbB8sFQI5UPSKhgt7jNumuPU0YTZXYyPERgj/UIIQnZNGpM2ziA==", "user"=>{"submitted"=>"true", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"入力内容を確認する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (9.1ms)
+  Rendered users/new.html.slim within layouts/application (14.3ms)
+Completed 200 OK in 58ms (Views: 53.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:16:50 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/q6jUwo8C2/q8ewNFYJNrYBymzYsWUpLOFr1CDwkD/LMHKu8aEUeJ47dSGkJ/45vGFl5IXtLgDbWOnkih8WpeA==", "user"=>{"submitted"=>"true", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"入力内容を確認する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (9.4ms)
+  Rendered users/new.html.slim within layouts/application (15.4ms)
+Completed 200 OK in 73ms (Views: 67.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:16:50 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFNHXWVlEqQCoSUMN7n5faJUN2Euvm+ee+Dl9BFfdnKi4U+yBxwH7GaNgWgrxDq/On/VdnmspeOVgGneqr7Q+A==", "user"=>{"submitted"=>"true", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"入力内容を確認する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (11.0ms)
+  Rendered users/new.html.slim within layouts/application (16.7ms)
+Completed 200 OK in 67ms (Views: 62.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-17 20:16:58 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l18JocX1YLnMd875kDTbVDo9PCauGD/E4kLo8mxBsWSl7QFOp4x18ahbap2MSRiWohbeMfkK9bkMImTY16AX7g==", "user"=>{"submitted"=>"true", "name"=>"hiroshi", "email"=>"admin@example.com", "memo"=>"I am hero."}, "commit"=>"入力内容を確認する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (7.7ms)
+  Rendered users/new.html.slim within layouts/application (12.4ms)
+Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-17 20:16:59 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.slim:14
+  Rendered users/index.html.slim within layouts/application (8.7ms)
+Completed 200 OK in 55ms (Views: 50.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-17 20:17:01 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/_form.html.slim (11.5ms)
+  Rendered users/new.html.slim within layouts/application (16.8ms)
+Completed 200 OK in 62ms (Views: 59.1ms | ActiveRecord: 0.0ms)
+
+

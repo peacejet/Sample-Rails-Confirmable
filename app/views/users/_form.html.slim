@@ -1,0 +1,46 @@
+= form_for @user do |f|
+  - if @user.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
+      ul
+        - @user.errors.full_messages.each do |message|
+          li
+            = message
+  = f.hidden_field :submitted
+  - if @user.submitted == "1"
+    .field
+      = f.label :name
+      = @user.name
+      = f.hidden_field :name
+      br/
+      br/
+    .field
+      = f.label :email
+      = @user.email
+      = f.hidden_field :email
+      br/
+      br/
+    .field
+      = f.label :memo
+      = @user.memo
+      = f.hidden_field :memo
+      br/
+      br/
+    .actions
+      = f.button "戻る", name: "#{f.object_name}[confirmed]", value: ""
+      = f.button "登録する", name: "#{f.object_name}[confirmed]", value: "1"
+  - else
+    .field
+      = f.label :name
+      br
+      = f.text_field :name
+    .field
+      = f.label :email
+      br
+      = f.text_field :email
+    .field
+      = f.label :memo
+      br
+      = f.text_field :memo
+    .actions
+      = f.submit '入力内容を確認する', data: { disable_with: "Please Wait..." }
